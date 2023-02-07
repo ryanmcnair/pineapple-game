@@ -1,6 +1,6 @@
 import React from "react";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import { firebase, auth } from "../app/firebaseApp";
+import firebase from "../app/firebaseApp";
 
 console.log('firebase', firebase);
 // Configure FirebaseUI
@@ -22,7 +22,7 @@ function SignInScreen() {
         >
             <h1>Pineapple Login</h1>
             <p>Please sign-in:</p>
-            <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
+            <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
     );
 }
